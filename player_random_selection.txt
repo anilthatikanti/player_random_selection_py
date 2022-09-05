@@ -1,0 +1,16 @@
+import random
+list_names = list(input("").split())
+
+list_of_players = []
+
+for i in list_names:
+    list_of_players.append(str(i))
+
+count = 0
+selected_players = len(list_of_players)
+for i in range(selected_players):
+    player = random.choice(list_of_players)
+    count+=1
+    list_of_players.remove(player)
+    print('{}. {}'.format(count,player))
+    
